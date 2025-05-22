@@ -266,10 +266,13 @@ getData();
 //---- Update data to Local Storage ----//
 function updateData() {
   localStorage.clear();
-  if (history.length > 0) {
+  if (history.length > 0 && idCounter > -1) {
     const record = JSON.stringify(history);
+    const idNum = JSON.stringify(idCounter);
     localStorage.setItem("records", record);
+    localStorage.setItem("idNum", idNum);
     console.log("Saved:", record);
+    console.log("idNum:", idNum);
   } else {
     console.log("Nothing to save. History is empty.");
   }
@@ -278,9 +281,10 @@ function updateData() {
 //---- Get data from Local Storage ----//
 function getData() {
   let records = localStorage.getItem("records");
-
+  let idData = localStorage.getItem("idNum");
   if (records) {
     history = JSON.parse(records);
+    idCounter = JSON.parse(idData);
     createRecord(history);
     totalStat();
   } else {
