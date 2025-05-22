@@ -290,4 +290,6 @@ function getData() {
   } else {
     history = [];
   }
+  console.log(`Get History: ${history}`);
+  console.log(`Get idCounter: ${idCounter}`);
 }
