@@ -7,6 +7,21 @@
 .root {
   height: 100vh;
   min-height: 700px;
+  background-image: linear-gradient(
+    to right top,
+    #1b5dd8,
+    #007de6,
+    #0097e8,
+    #00aee1,
+    #00c2d8,
+    #00c4d8,
+    #00c5d9,
+    #00c7d9,
+    #00b6e4,
+    #00a3ed,
+    #008df0,
+    #1973e7
+  );
 }
 
 .w-100 {
