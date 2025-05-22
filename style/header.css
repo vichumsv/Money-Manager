@@ -1,0 +1,9 @@
+.header {
+  height: 57.3px;
+  padding: 10px;
+  background: var(--blueBG1);
+  font-size: 25px;
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+}

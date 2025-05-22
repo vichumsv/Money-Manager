@@ -1,0 +1,27 @@
+.side-panel {
+  width: 60px;
+  padding: 12px 0 15px;
+  background: var(--blueBG1);
+  flex-direction: column;
+  gap: 25px;
+  color: #8280e0;
+  .logo {
+    width: var(--logo-size);
+    margin-bottom: 30px;
+  }
+  .dash-icon {
+    font-size: var(--icon-size);
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
+    &.active {
+      color: #fff;
+      cursor: default;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 40px;
+    flex-shrink: 0;
+  }
+}

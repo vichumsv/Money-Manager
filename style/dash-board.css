@@ -1,0 +1,59 @@
+.main-panel {
+  .dashboard-scr {
+    .financial-summary {
+      gap: 3%;
+      justify-content: space-evenly;
+      margin-bottom: 20px;
+      @media screen and (max-width: 450px) {
+        gap: 15px;
+        flex-direction: column;
+      }
+      .f-s-box {
+        width: 30%;
+        padding: 15px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        @media screen and (max-width: 450px) {
+          width: 100%;
+        }
+        &:nth-child(1) {
+          background: rgb(27, 84, 27);
+        }
+        &:nth-child(2) {
+          background: rgb(157, 27, 27);
+        }
+        &:nth-child(3) {
+          background: rgb(60, 93, 189);
+        }
+        .f-s-title {
+          font-size: 22px;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+          @media screen and (max-width: 767px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+        .f-s-amount {
+          font-size: 22px;
+          @media screen and (max-width: 767px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    #myChart {
+      width: 100% !important;
+      height: 300px !important;
+    }
+  }
+}

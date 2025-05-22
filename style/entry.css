@@ -1,0 +1,112 @@
+.entry-scr {
+  .screen-name {
+    margin-bottom: 15px !important;
+  }
+  .transaction-container {
+    .trans-instruction {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 40px;
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 450px) {
+        margin-bottom: 20px;
+      }
+    }
+    .trans-type {
+      gap: 30px;
+      margin-bottom: 30px;
+      @media screen and (max-width: 450px) {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+      }
+      .trans-tab {
+        width: 25%;
+        padding: 15px;
+        text-align: center;
+        font-size: 25px;
+        border: 1px solid #8280e0;
+        background: #3c3c3c;
+        cursor: pointer;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+          width: 120px;
+        }
+        @media screen and (max-width: 450px) {
+          padding: 10px;
+        }
+        &:first-child {
+          &:hover,
+          &.active {
+            background: rgb(27, 84, 27);
+          }
+        }
+        &:last-child {
+          &:hover,
+          &.active {
+            background: rgb(157, 27, 27);
+          }
+        }
+        &.active {
+          cursor: default;
+        }
+      }
+    }
+    .trans-details {
+      div {
+        margin-bottom: 20px;
+      }
+      label {
+        font-size: 20px;
+        margin-right: 10px;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+      input {
+        font-size: 16px;
+        width: 150px;
+        border: none;
+        padding: 5px;
+      }
+      #trans-description {
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+  .btn-container {
+    text-align: center;
+    #trans-submit {
+      width: fit-content;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: #8280e0;
+      color: #fff;
+      border: none;
+      opacity: 0.5;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      &.enable {
+        opacity: 1;
+        &:hover {
+          background: #5654e5;
+          cursor: pointer;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

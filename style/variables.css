@@ -1,0 +1,10 @@
+:root {
+  --blueBG1: #1b2055;
+  --blueBG2: #141935;
+  --logo-size: 40px;
+  --icon-size: calc(var(--logo-size) - 7px);
+  @media screen and (max-width: 767px) {
+    --logo-size: 30px;
+    --icon-size: calc(var(--logo-size) - 7px);
+  }
+}

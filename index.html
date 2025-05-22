@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Manager</title>
+    <!-- Font Awesome Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/zilla-slab" rel="stylesheet" />
+
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon" />
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <div class="root flex-center">
+      <div class="container d-flex">
+        <!-- Side Panel -->
+        <div class="side-panel d-flex flex-align-center">
+          <div class="logo">
+            <img src="images/logo/logo.png" alt="Logo" title="Logo" />
+          </div>
+          <div id="dashboard-icon" class="dash-icon active" title="Dashboard">
+            <i class="fa-solid fa-gauge"></i>
+          </div>
+          <div id="entry-icon" class="dash-icon" title="New Transaction">
+            <i class="fa-solid fa-circle-plus"></i>
+          </div>
+          <div id="history-icon" class="dash-icon" title="History">
+            <i class="fa-solid fa-clipboard"></i>
+          </div>
+        </div>
+        <!-- Main Area-->
+        <div class="main-area w-100">
+          <!-- Header -->
+          <div class="header d-flex flex-align-center">
+            <div class="app-name">Money Manager</div>
+          </div>
+
+          <!-- Main Panel -->
+          <div class="main-panel">
+            <!-- Dash board screen -->
+            <div class="screen dashboard-scr">
+              <div class="screen-name">DASHBOARD</div>
+              <div class="financial-summary d-flex">
+                <!-- Income -->
+                <div class="f-s-box">
+                  <div class="f-s-title">Income</div>
+                  <div id="income-amt" class="f-s-amount">0</div>
+                </div>
+                <!-- Expense -->
+                <div class="f-s-box">
+                  <div class="f-s-title">Expense</div>
+                  <div id="expense-amt" class="f-s-amount">0</div>
+                </div>
+
+                <!-- Balance -->
+                <div class="f-s-box">
+                  <div class="f-s-title">Balance</div>
+                  <div id="balance-amt" class="f-s-amount">0</div>
+                </div>
+              </div>
+              <!-- Chart -->
+              <canvas id="myChart"></canvas>
+            </div>
+
+            <!-- Entry Screen -->
+            <div class="screen entry-scr hide">
+              <div class="screen-name">Transaction</div>
+              <div class="transaction-container">
+                <div class="trans-instruction">
+                  Select your transaction type, fill below details & click
+                  submit.
+                </div>
+                <div class="trans-type d-flex">
+                  <div class="trans-tab trans-income">Income</div>
+                  <div class="trans-tab trans-expense">Expense</div>
+                </div>
+                <div class="trans-details">
+                  <form>
+                    <div>
+                      <label for="trans-amount">Amount:</label>
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        name="number"
+                        id="trans-amount"
+                        placeholder="Enter Amount"
+                        onkeyup="toggleSubmit()"
+                      />
+                    </div>
+                    <div>
+                      <label for="trans-date">Date:</label>
+                      <input type="date" name="date" id="trans-date" />
+                    </div>
+                    <div>
+                      <label for="trans-description">Description:</label>
+                      <input
+                        type="text"
+                        id="trans-description"
+                        placeholder="Enter Description"
+                        onkeyup="toggleSubmit()"
+                      />
+                    </div>
+                    <div class="btn-container">
+                      <button id="trans-submit" class="btn-submit">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- History Screen -->
+            <div class="screen history-scr hide">
+              <div class="screen-name">History</div>
+              <div class="history-filter d-flex">
+                <div class="history h-all active">All</div>
+                <div class="history h-income">Income</div>
+                <div class="history h-expense">Expense</div>
+              </div>
+              <div class="history-data-container">
+                <table id="history-data"></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
